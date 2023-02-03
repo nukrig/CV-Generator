@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Personal Information</title>
+</head>
+<body>
+    <section id="1/3">
+        <div class="leftBlock">
+            <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
+            <h1 class="heading">პირადი ინფო</h1>
+            <span class="stage">1/3</span>
+            <span class="line-personal"></span>
+            <form class="personalInformation" action="">
+                <div class="div-firstname">
+                    <label class="main-inputs" for="fname">სახელი</label><br>
+                    <input class="name-inp" type="text" name="fname" id="fname-inp" placeholder="ანზორ">
+                    <h4 class="name warning">მინიმუმ 2 ასო,ქართული ასოები</h4>
+                </div>
+                <div class="div-lastname">
+                    <label class="main-inputs" for="lname">გვარი</label><br>
+                    <input class="name-inp" type="text" name="lname" id="lname-inp" placeholder="მუმლაძე">
+                    <h4 class="name warning">მინიმუმ 2 ასო,ქართული ასოები</h4>
+                </div>
+                <div class="div-photo">
+                    <h4 class="photo-h">პირადი ფოტოს ატვირთვა</h4>
+                    <label class="photo-label">
+                    <input type="file" class="photo-input"/>ატვირთვა
+                    </label>
+                </div>
+                <div class="div-about">
+                    <label class="main-inputs" for="about">ჩემ შესახებ (არასავალდებულო)</label>
+                    <textarea class="personal-textarea" name="about" id="personal-about" placeholder="ზოგადი ინფო შენ შესახებ"></textarea>
+                </div>
+                <div class="div-email">
+                    <label class="main-inputs" for="email">ელ.ფოსტა</label><br>
+                    <input class="full-width-input" type="text" name="email" id="eMail" placeholder="anzorr666@redberry.ge">
+                    <h4 class="email warning">უნდა მთავრდებოდეს @redberry.ge-ით</h4>
+                </div>
+                <div class="div-number">
+                    <label class="main-inputs" for="email">მობილურის ნომერი</label><br>
+                    <input class="full-width-input" type="text" name="number" id="number" placeholder="+995 551 12 34 56">
+                    <h4 class="mobile warning">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</h4>
+                </div>
+            </form>
+            <a href="./experience.html"><button type="submit" class="nextPage">შემდეგი</button></a>
+        </div>
+        <div class="rightBlock">
+            <h1>CV!</h1>
+            <img class="logo-12" src="./assets/images/LOGO-12 1.png" alt="">
+        </div>
+    </section>
+    <script src="test.js"></script>
+</body>
+</html>
