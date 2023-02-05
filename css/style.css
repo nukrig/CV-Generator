@@ -125,7 +125,6 @@ body{
     background-color: #FFFFFF;
     border: 0;
 }
-
 /* NAME */
 .div-firstname{
     position: absolute;
@@ -532,8 +531,6 @@ body{
     width: 662px;
     overflow: hidden;
 }
-
-
 #popUp{
     position: absolute;
     width: 427px;
