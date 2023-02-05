@@ -94,16 +94,16 @@ body{
     top: 513px;
     left: calc(50% - 464px/2);
 }
-                                        /* PERSONAL HTML */
-/* LEFT BLOCK */
-.leftBlock{
+                                        /* PERSONAL*/
+/* LEFT BLOCK 1 */
+.leftBlock1{
     width: 1158px;
     height: 1080px;
     background-color: #F9F9F9;
     position: relative;
 }
 /* HEADING */
-.line-personal{
+.headingLine{
     width: 798px;
     border: 1px solid #1A1A1A;
     position: absolute;
@@ -187,15 +187,17 @@ body{
     padding: 8px 24px;
 
 }
-.personal-textarea{
+.textarea{
     width: 798px;
-    height: 103px;
     resize: none;
     border-radius: 4px;
     padding: 13px 16px;
     background-color: #FFFFFF;
     border: 1px solid #BCBCBC;
     margin-top: 8px;
+}
+.pers-txtarea{
+    height: 103px;
 }
 /* EMAIL */
 .div-email{
@@ -227,8 +229,8 @@ body{
     position: absolute;
     width: 151px;
     height: 48px;
-    top: 967px;
-    left: 797px;
+    right: 150px;
+    bottom: 65px;
     border-radius: 4px;
     padding: 16px 60px;
     background-color: #6B40E3;
@@ -240,7 +242,14 @@ body{
     color: #FFFFFF;
     padding: 14px 35px;
 }
-/* RIGHT BLOCK */
+.logo-12{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 994px;
+    left: 78px;
+}
+/* RIGHT BLOCK*/
 .rightBlock{
     position: absolute;
     left: 1158px;
@@ -249,15 +258,14 @@ body{
     height: 1080px;
     padding: 48px 75px 50px 80px;
 }
-.logo-12{
-    position: absolute;
-    width: 42px;
-    height: 42px;
-    top: 994px;
-    left: 78px;
+                                        /* EXPERIENCE*/
+/* LEFT BLOCK2 */
+.leftBlock2{
+    width: 1158px;
+    height: 1080px;
+    background-color: #F9F9F9;
+    position: relative;
 }
-                                        /* EXPERIENCE HTML */
-/* LEFT BLOCK */
 /* POSITION */
 .div-position{
     position: absolute;
@@ -302,6 +310,9 @@ body{
     left: 126px;
     padding: 8px 24px;
 }
+.exp-txtarea{
+    height: 123px;
+}
 /*BUTTON */
 .more{
     position: absolute;
@@ -318,11 +329,18 @@ body{
     line-height: 19.54px;
     border: 0;
 }
+.bottom-line{
+    position: absolute;
+    width: 798px;
+    top: 759px;
+    left: 149px;
+    border: 1px solid #C1C1C1;
+}
 .previous{
     position: absolute;
     width: 113px;
     height: 48px;
-    top: 967px;
+    bottom: 65px;
     left: 150px;
     border-radius: 4px;
     padding: 14px 35px;
@@ -333,4 +351,125 @@ body{
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.08em;
+}
+                                        /* EDUCATION*/
+/* LEFT BLOCK 3 */
+.leftBlock3{
+    width: 1158px;
+    height: 1080px;
+    background-color: #F9F9F9;
+    position: relative;
+}
+.div-university{
+    position: absolute;
+    width: 846px;
+    height: 125px;
+    top: 157px;
+    left: 126px;
+    padding: 8px 24px;
+}
+.div-stage{
+    position: absolute;
+    width: 419px;
+    height: 125px;
+    top: 294px;
+    left: 126px;
+    padding: 8px 24px;
+}
+.div-educFinish{
+    position: absolute;
+    width: 419px;
+    height: 125px;
+    top: 294px;
+    left: 553px;
+    padding: 8px 24px;
+}
+.div-description2{
+    position: absolute;
+    width: 846px;
+    height: 224px;
+    top: 405px;
+    left: 126px;
+    padding: 8px 24px;
+}
+.educ-txtarea{
+    height: 179px;
+}
+.bottom-line2{
+    position: absolute;
+    width: 798px;
+    top: 674px;
+    left: 149px;
+    border: 1px solid #C1C1C1;
+}
+.more-position{
+    top: 804px;
+    left: 149px;
+}
+                                    /* PERSONAL-RIGHT BLOCK  */
+.addname{
+    position: absolute;
+    top: 68px;
+    left: 80px;
+    color: #F93B1D;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41.51px;
+    display: flex;
+    gap: 20px;
+}
+.addMailImg{
+    position: absolute;
+    top: 130.67px;
+    left: 82.67px;
+    color: #898989;
+}
+.addPhoneImg{
+    position: absolute;
+    top: 160.8px;
+    left: 82.66px;
+    color: #898989;
+}
+.addMail{
+    position: absolute;
+    top: 127px;
+    left: 111px;
+    color: #1A1A1A;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.47px;
+}
+.addPhone{
+    position: absolute;
+    top: 158px;
+    left: 111px;
+    color: #1A1A1A;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.47px;
+}
+.aboutMeHeader{
+    position: absolute;
+    top: 213px;
+    left: 80px;
+    color: #F93B1D;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.98px;
+}
+.aboutMe{
+    position: absolute;
+    top: 250px;
+    left: 80px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    width: 432px;
+}
+#page2{
+    display: none;
+}
+#page3{
+    display: none;
 }

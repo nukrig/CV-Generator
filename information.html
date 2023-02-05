@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Personal Information</title>
+</head>
+<body>
+                                        <!-- PERSONAL INFORMATION -->
+    <section >
+        <div id="page1" class="leftBlock1">
+            <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
+            <h1 class="heading">პირადი ინფო</h1>
+            <span class="stage">1/3</span>
+            <span class="headingLine"></span>
+            <form class="personalInformation" action="">
+                <div class="div-firstname">
+                    <label class="main-inputs" for="fname">სახელი</label><br>
+                    <input class="name-inp" type="text" name="fname" id="fname-inp" placeholder="ანზორ">
+                    <h4 class="name warning">მინიმუმ 2 ასო,ქართული ასოები</h4>
+                </div>
+                <div class="div-lastname">
+                    <label class="main-inputs" for="lname">გვარი</label><br>
+                    <input class="name-inp" type="text" name="lname" id="lname-inp" placeholder="მუმლაძე">
+                    <h4 class="name warning">მინიმუმ 2 ასო,ქართული ასოები</h4>
+                </div>
+                <div class="div-photo">
+                    <h4 class="photo-h">პირადი ფოტოს ატვირთვა</h4>
+                    <label class="photo-label">
+                    <input type="file" class="photo-input"/>ატვირთვა
+                    </label>
+                </div>
+                <div class="div-about">
+                    <label class="main-inputs" for="about">ჩემ შესახებ (არასავალდებულო)</label>
+                    <textarea class="pers-txtarea textarea" name="about" id="personal-about" placeholder="ზოგადი ინფო შენ შესახებ"></textarea>
+                </div>
+                <div class="div-email">
+                    <label class="main-inputs" for="email">ელ.ფოსტა</label><br>
+                    <input class="full-width-input" type="text" name="email" id="eMail" placeholder="anzorr666@redberry.ge">
+                    <h4 class="email warning">უნდა მთავრდებოდეს @redberry.ge-ით</h4>
+                </div>
+                <div class="div-number">
+                    <label class="main-inputs" for="email">მობილურის ნომერი</label><br>
+                    <input class="full-width-input" type="text" name="number" id="number" placeholder="+995 551 12 34 56">
+                    <h4 class="mobile warning">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</h4>
+                </div>
+            </form>
+            <button class="nextPage" id="nextPage1">შემდეგი</button>
+        </div>
+        <div id="rightBlock" class="rightBlock">
+            <div class="addname">
+                <h2 id="addFname" class="addFname"></h2>
+                <h2 id="addLname" class="addLname"></h2>
+            </div>
+            <img class="addMailImg" src="./assets/images/mail.png" alt="mailicon">
+            <span id="addMail" class="addMail"></span>
+            <img class="addPhoneImg" src="./assets/images/phone.png" alt="phoneicon"> 
+            <span id="addPhone" class="addPhone"></span>
+            <img class="logo-12" src="./assets/images/LOGO-12 1.png" alt="">
+            <h3 class="aboutMeHeader" id="aboutMeHeader"> ჩემ შესახებ</h3>
+            <p class="aboutMe" id="aboutMe"></p>
+        </div>
+    </section>
+                                            <!-- EXPERIENCE -->
+    <section>
+        <div id="page2" class="leftBlock2" >
+            <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
+            <h1 class="heading">გამოცდილება</h1>
+            <span class="stage">2/3</span>
+            <span class="headingLine"></span>
+            <form class="personalInformation" action="">
+                <div class="div-position">
+                    <label class="main-labels" for="email">თანამდებობა</label><br>
+                    <input class="full-width-input" type="text" name="email" id="eMail" placeholder="დეველოპერი, დიზაინერი, ა.შ.">
+                    <h4 class="warning">მინიმუმ 2 სიმბოლო</h4>
+                </div>
+                <div class="div-employer">
+                    <label class="main-labels" for="employer">დამსაქმებელი</label><br>
+                    <input class="full-width-input" type="text" name="employer" id="employer" placeholder="დამსაქმებელი">
+                    <h4 class="warning">მინიმუმ 2 სიმბოლო</h4>
+                </div>
+                <div class="div-startDate">
+                    <label class="main-labels" for="sDate">დაწყების რიცხვი</label><br>
+                    <input class="name-inp" type="date" name="date" id="startDate-inp" placeholder="ანზორ">
+                </div>
+                <div class="div-endDate">
+                    <label class="main-labels" for="lname">დამთავრების რიცხვი</label><br>
+                    <input class="name-inp" type="date" name="date" id="endtDate-inp" placeholder="მუმლაძე">
+                </div>
+                <div class="div-description">
+                    <label class="main-inputs" for="description">აღწერა</label>
+                    <textarea class="exp-txtarea textarea" name="descr" id="experience-desc" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+                </div>
+            </form>
+                <button class="more">მეტი გამოცდილების დამატება</button>
+                <button id="previous1" class="previous">უკან</button>
+                <button id="nextPage2"  class="nextPage">შემდეგი</button>
+                <span class="bottom-line"></span>
+        </div>
+        <div class="rightBlock">
+            <img class="logo-12" src="./assets/images/LOGO-12 1.png" alt="">
+        </div>
+    </section>
+                                            <!-- EDUCATION -->
+    <section>
+        <div id="page3" class="leftBlock3">
+            <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
+            <h1 class="heading">განათლება</h1>
+            <span class="stage">3/3</span>
+            <span class="headingLine"></span>
+            <form class="personalInformation">
+                <div class="div-university">
+                    <label class="main-labels" for="university">სასწავლებელი</label><br>
+                    <input class="full-width-input" type="text" name="university" id="university" placeholder="სასწავლებელი">
+                    <h4 class="warning">მინიმუმ 2 სიმბოლო</h4>
+                </div>
+                <div class="div-stage">
+                        <label class="main-labels" for="stage">ხარისხი</label><br>
+                        <select class="name-inp" name="stage" id="university-stage" aria-placeholder="აირჩიეთ ხარისხი">
+                        </select>
+                </div>
+                <div class="div-educFinish">
+                    <label class="main-labels" for="finish">დამთავრების რიცხვი</label><br>
+                    <input class="name-inp" type="date" name="finishInput" id="educFinish" placeholder="მუმლაძე">
+                </div>
+                <div class="div-description2">
+                    <label class="main-inputs" for="description">აღწერა</label>
+                    <textarea class="educ-txtarea textarea" name="descr" id="education-desc" placeholder="განათლების აღწერა"></textarea>
+                </div>
+            </form>
+                <span class="bottom-line2"></span>
+                <button class="more more-position">მეტი გამოცდილების დამატება</button>
+                <button id="previous2" class="previous">უკან</button>
+                <button id="nextPage3"  class="nextPage">შემდეგი</button>
+        </div>
+        <div class="rightBlock">
+            <img class="logo-12" src="./assets/images/LOGO-12 1.png" alt="">
+        </div>
+    </section>
+    <script src='./js/main.js'type="module"></script>
+</body>
+</html>
