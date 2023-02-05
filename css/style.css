@@ -3,9 +3,23 @@
     src: url(../assets/HelveticaNeue.ttc);
 }
 body{
-    font-family: Helvetica Neue,normal;
+    font-family: 'Helvetica Neue',normal;
+    width: 1920px;
 }
 /* GLOBAL STYLES */
+.leftBlock1{
+    width: 1158px;
+    height: 1080px;
+    background-color: #F9F9F9;
+    position: relative;
+}
+.rightBlock{
+    position: absolute;
+    left: 1158px;
+    top: 0;
+    width: 822px;
+    height: 1080px;
+}
 .heading{
     font-weight: 700;
     font-size: 24px;
@@ -96,12 +110,6 @@ body{
 }
                                         /* PERSONAL*/
 /* LEFT BLOCK 1 */
-.leftBlock1{
-    width: 1158px;
-    height: 1080px;
-    background-color: #F9F9F9;
-    position: relative;
-}
 /* HEADING */
 .headingLine{
     width: 798px;
@@ -249,17 +257,11 @@ body{
     top: 994px;
     left: 78px;
 }
-/* RIGHT BLOCK*/
-.rightBlock{
-    position: absolute;
-    left: 1158px;
-    top: 0;
-    width: 822px;
-    height: 1080px;
-    padding: 48px 75px 50px 80px;
-}
                                         /* EXPERIENCE*/
 /* LEFT BLOCK2 */
+#page2{
+    display: none;
+}
 .leftBlock2{
     width: 1158px;
     height: 1080px;
@@ -354,13 +356,16 @@ body{
 }
                                         /* EDUCATION*/
 /* LEFT BLOCK 3 */
+#page3{
+    display: none;
+}
 .leftBlock3{
     width: 1158px;
     height: 1080px;
     background-color: #F9F9F9;
     position: relative;
 }
-.div-university{
+.div-institute{
     position: absolute;
     width: 846px;
     height: 125px;
@@ -406,70 +411,149 @@ body{
     top: 804px;
     left: 149px;
 }
-                                    /* PERSONAL-RIGHT BLOCK  */
+                                        /* RIGHT BLOCK*/
+/* FIRST PAGE INFO */
+.rightBlock h3{
+    color: #F93B1D;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.98px;
+    margin-left: 80px;
+}
 .addname{
-    position: absolute;
-    top: 68px;
-    left: 80px;
+    margin-top: 68px;
+    margin-left: 80px;
     color: #F93B1D;
     font-weight: 700;
     font-size: 34px;
     line-height: 41.51px;
     display: flex;
     gap: 20px;
+    max-width: 600px;
+    overflow: hidden;
 }
 .addMailImg{
-    position: absolute;
-    top: 130.67px;
-    left: 82.67px;
+    margin-top: 20.67px;
+    margin-left: 82.67px;
     color: #898989;
 }
 .addPhoneImg{
-    position: absolute;
-    top: 160.8px;
-    left: 82.66px;
+    margin-top: 13.47px;
+    margin-left: 82.55px;
     color: #898989;
 }
 .addMail{
-    position: absolute;
-    top: 127px;
-    left: 111px;
+    gap: 11.67px;
     color: #1A1A1A;
     font-weight: 400;
     font-size: 18px;
     line-height: 21.47px;
+    display: inline-block;
+    max-width: 500px;
+    overflow: hidden;
 }
 .addPhone{
-    position: absolute;
-    top: 158px;
-    left: 111px;
+    gap: 11.81px;
     color: #1A1A1A;
     font-weight: 400;
     font-size: 18px;
     line-height: 21.47px;
+    display: inline-block;
+    max-width: 500px;
+    overflow: hidden;
 }
 .aboutMeHeader{
-    position: absolute;
-    top: 213px;
-    left: 80px;
-    color: #F93B1D;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21.98px;
+    margin-top: 34px;
 }
 .aboutMe{
-    position: absolute;
-    top: 250px;
-    left: 80px;
+    margin-top: 15px;
+    margin-left: 80px;
     color: #000000;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    width: 432px;
+    text-transform: lowercase;
+    max-width: 432px;
+    overflow: hidden;
 }
-#page2{
+.cv-line{
+    width: 662px;
+    border: 1px solid #C8C8C8;
+    display: inline-block;
+    margin-top: 19px;
+    margin-left: 80px;
+}
+/* SECOND PAGE INFO */
+.ExperienceHeader{
+    margin-top: 24px;
+}
+.addWork{
+    margin-top: 15px;
+    margin-left: 80px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19.54px;
+    color: #1A1A1A;
+    max-width: 662px;
+    overflow: hidden;
+}
+.addDate{
+    margin-top: 7px;
+    margin-left: 80px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 19.17px;
+    color:#909090;
+}
+.addDescription{
+    margin-top: 16px;
+    margin-left: 80px;
+    margin-bottom: 13px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    width: 662px;
+    overflow: hidden;
+    font-family: 'Helvetica Neue';
+}
+/* ThIRD PAGE INFO */
+.EducationHeader{
+    margin-top: 58px;
+}
+.addEducation{
+    margin-top: 15px;
+    margin-left: 80px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19.54px;
+    width: 662px;
+    overflow: hidden;
+}
+
+
+#popUp{
+    position: absolute;
+    width: 427px;
+    height: 167px;
+    top: 53px;
+    left: 1423px;
+    right: 70px;
+    border-radius: 8px;
+    padding:39.5px 33px 41.5px 30px;
+    gap:10px;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 43px;
+    color: #1A1A1A;
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25);
     display: none;
 }
-#page3{
-    display: none;
+#X{
+    position: absolute;
+    top: 17.44px;
+    right: 11.44px;
 }

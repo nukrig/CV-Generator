@@ -24,3 +24,4 @@ export let formData=
     "image": "",
     "about_me": ""
   }
+  // console.log(formData.educations[0].due_date);
