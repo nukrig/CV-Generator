@@ -4,21 +4,28 @@
 }
 body{
     font-family: 'Helvetica Neue',normal;
+}
+.mainDiv{
     width: 1920px;
+    height: 1080px;
+    display: flex;
 }
 /* GLOBAL STYLES */
-.leftBlock1{
+.leftBlock{
     width: 1158px;
     height: 1080px;
     background-color: #F9F9F9;
-    position: relative;
 }
 .rightBlock{
-    position: absolute;
-    left: 1158px;
-    top: 0;
     width: 822px;
     height: 1080px;
+}
+.rightBlock h3{
+    color: #F93B1D;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.98px;
+    margin-left: 80px;
 }
 .heading{
     font-weight: 700;
@@ -122,27 +129,24 @@ body{
     position: absolute;
     top: 57px;
     left: 62px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: 0;
 }
 /* NAME */
 .div-firstname{
-    position: absolute;
     width: 419px;
     height: 122px;
-    top: 157px;
-    left: 126px;
+    display: inline-block;
+    margin-top: 157px;
+    margin-left: 126px;
     padding: 8px 24px;
-    width: 371px;
 }
 .div-lastname{
-    position: absolute;
     width: 419px;
     height: 122px;
-    top: 157px;
-    left: 553px;
+    display: inline-block;
+    margin-left: 8px;
     padding: 8px 24px;
-    width: 371px;
 }
 .name{
     width: 371px;
@@ -157,10 +161,12 @@ body{
     border: 1px solid #BCBCBC;
 }
 /* PHOTO UPLOAD*/
+.div-photo{
+    display: flex;
+}
 .photo-h{
-    position: absolute;
-    left: 150px;
-    top: 325px;
+    margin-left: 150px;
+    margin-top: 46px;
     font-size: 18px;
     width: 232px;
     line-height: 22px;
@@ -170,12 +176,11 @@ body{
     display: none;
 }
 .photo-label {
-    position: absolute;
     width: 107px;
     height: 27px;
     border-radius: 4px;
-    top: 325px;
-    left: 401px;
+    margin-top: 46px;
+    margin-left: 19px;
     padding: 4px 19px 6px 19px;
     cursor: pointer;
     background-color: #0E80BF;
@@ -186,11 +191,10 @@ body{
 }
 /* ABOUT */
 .div-about{
-    position: absolute;
     width: 846px;
     height: 148px;
-    top: 393px;
-    left: 126px;
+    margin-top: 46px;
+    margin-left: 126px;
     padding: 8px 24px;
 
 }
@@ -208,11 +212,10 @@ body{
 }
 /* EMAIL */
 .div-email{
-    position: absolute;
     width: 846px;
     height: 122px;
-    top: 558px;
-    left: 126px;
+    margin-top: 17px;
+    margin-left: 126px;
     padding: 8px 24px;
 }
 .email{
@@ -224,22 +227,17 @@ body{
 }
 /* MOBILE NUMBER */
 .div-number{
-    position: absolute;
     width: 846px;
     height: 122px;
-    top: 693px;
-    left: 126px;
+    margin-top: 13px;
+    margin-left: 126px;
     padding: 8px 24px;
 }
 /* NEXT*/
 .nextPage{
-    position: absolute;
     width: 151px;
     height: 48px;
-    right: 150px;
-    bottom: 65px;
     border-radius: 4px;
-    padding: 16px 60px;
     background-color: #6B40E3;
     border: 0;
     font-weight:500;
@@ -247,104 +245,11 @@ body{
     line-height:20px;
     letter-spacing:0.08em;
     color: #FFFFFF;
-    padding: 14px 35px;
-}
-.logo-12{
-    position: absolute;
-    width: 42px;
-    height: 42px;
-    top: 994px;
-    left: 78px;
-}
-                                        /* EXPERIENCE*/
-/* LEFT BLOCK2 */
-#page2{
-    display: none;
-}
-.leftBlock2{
-    width: 1158px;
-    height: 1080px;
-    background-color: #F9F9F9;
-    position: relative;
-}
-/* POSITION */
-.div-position{
-    position: absolute;
-    width: 846px;
-    height: 125px;
-    top: 157px;
-    left: 126px;
-    padding: 8px 24px;
-}
-/* EMPLOYER */
-.div-employer{
-    position: absolute;
-    width: 846px;
-    height: 125px;
-    top: 294px;
-    left: 126px;
-    padding: 8px 24px;
-}
-/* DATE */
-.div-startDate{
-    position: absolute;
-    width: 419px;
-    height: 125px;
-    top: 431px;
-    left: 126px;
-    padding: 8px 24px;
-}
-.div-endDate{
-    position: absolute;
-    width: 419px;
-    height: 125px;
-    top: 431px;
-    left: 553px;
-    padding: 8px 24px;
-}
-/* DESCRIPTION */
-.div-description{
-    position: absolute;
-    width: 846px;
-    height: 168px;
-    top: 541px;
-    left: 126px;
-    padding: 8px 24px;
-}
-.exp-txtarea{
-    height: 123px;
-}
-/*BUTTON */
-.more{
-    position: absolute;
-    width: 289px;
-    height: 48px;
-    top: 804px;
-    left: 149px;
-    border-radius: 4px;
-    padding: 14px 21px;
-    background-color: #62A1EB;
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19.54px;
-    border: 0;
-}
-.bottom-line{
-    position: absolute;
-    width: 798px;
-    top: 759px;
-    left: 149px;
-    border: 1px solid #C1C1C1;
 }
 .previous{
-    position: absolute;
     width: 113px;
     height: 48px;
-    bottom: 65px;
-    left: 150px;
     border-radius: 4px;
-    padding: 14px 35px;
     border: 0;
     background-color: #6B40E3;
     color: #FFFFFF;
@@ -353,72 +258,130 @@ body{
     line-height: 20px;
     letter-spacing: 0.08em;
 }
+.logo-12{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 994px;
+    left: 1176px;
+}
+                                        /* EXPERIENCE*/
+/* LEFT BLOCK2 */
+#page2{
+    display: none;
+}
+/* POSITION */
+.div-position{
+    width: 846px;
+    height: 125px;
+    margin-top: 157px;
+    margin-left: 126px;
+    padding: 8px 24px;
+}
+/* EMPLOYER */
+.div-employer{
+    width: 846px;
+    height: 125px;
+    margin-top: 12px;
+    margin-left: 126px;
+    padding: 8px 24px;
+}
+/* DATE */
+.div-startDate{
+    display: inline-block;
+    width: 419px;
+    height: 125px;
+    margin-top: 12px;
+    margin-left: 126px;
+    padding: 8px 24px;
+}
+.div-endDate{
+    display: inline-block;
+    width: 419px;
+    height: 125px;
+    padding: 8px 24px;
+}
+/* DESCRIPTION */
+.div-description{
+    width: 846px;
+    height: 168px;
+    margin-left: 126px;
+    padding: 8px 24px;
+}
+.exp-txtarea{
+    height: 123px;
+}
+.bottom-line{
+    content: '';
+    width: 798px;
+    height: 1px;
+    background-color:#C1C1C1;
+    margin-top: 50px;
+    margin-left: 149px;
+    display: block;
+}
+/*BUTTON */
+.more{
+    width: 289px;
+    height: 48px;
+    margin-top: 45px;
+    margin-left: 149px;
+    border-radius: 4px;
+    padding: 14px 21px;
+    background-color: #62A1EB;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.54px;
+    border: 0;
+    display: block;
+}
                                         /* EDUCATION*/
 /* LEFT BLOCK 3 */
 #page3{
     display: none;
 }
-.leftBlock3{
-    width: 1158px;
-    height: 1080px;
-    background-color: #F9F9F9;
-    position: relative;
-}
 .div-institute{
-    position: absolute;
     width: 846px;
     height: 125px;
-    top: 157px;
-    left: 126px;
+    margin-top: 157px;
+    margin-left: 126px;
     padding: 8px 24px;
 }
 .div-stage{
-    position: absolute;
+    display: inline-block;
     width: 419px;
     height: 125px;
-    top: 294px;
-    left: 126px;
+    margin-top: 12px;
+    margin-left: 126px;
     padding: 8px 24px;
 }
 .div-educFinish{
-    position: absolute;
+    display: inline-block;
     width: 419px;
     height: 125px;
-    top: 294px;
-    left: 553px;
     padding: 8px 24px;
 }
 .div-description2{
-    position: absolute;
     width: 846px;
     height: 224px;
-    top: 405px;
-    left: 126px;
+    margin-left: 126px;
     padding: 8px 24px;
 }
 .educ-txtarea{
-    height: 179px;
-}
-.bottom-line2{
-    position: absolute;
-    width: 798px;
-    top: 674px;
-    left: 149px;
-    border: 1px solid #C1C1C1;
-}
-.more-position{
-    top: 804px;
-    left: 149px;
+    min-height: 179px;
 }
                                         /* RIGHT BLOCK*/
 /* FIRST PAGE INFO */
-.rightBlock h3{
-    color: #F93B1D;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21.98px;
-    margin-left: 80px;
+#addPhoto{
+    position: absolute;
+    width: 246px;
+    height: 246px;
+    top: 48px;
+    left: 501px;
+    border-radius: 133px;
 }
+    
 .addname{
     margin-top: 68px;
     margin-left: 80px;
@@ -532,15 +495,14 @@ body{
     overflow: hidden;
 }
 #popUp{
-    position: absolute;
+    position: relative;
+    margin-left: 52px;
+    margin-top: 53px;
     width: 427px;
     height: 167px;
-    top: 53px;
-    left: 1423px;
-    right: 70px;
     border-radius: 8px;
-    padding:39.5px 33px 41.5px 30px;
-    gap:10px;
+    padding: 39.5px 33px 41.5px 30px;
+    gap: 10px;
     font-weight: bold;
     font-size: 28px;
     line-height: 43px;
@@ -554,3 +516,14 @@ body{
     top: 17.44px;
     right: 11.44px;
 }
+
+
+
+
+
+
+
+/* .personalInformation{
+    position: absolute;
+    top: 630px;
+} */

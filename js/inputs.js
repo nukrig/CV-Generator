@@ -1,6 +1,19 @@
 import { formData } from "./data.js";
 export const inputExport = ()=>{
     // FIST PAGE
+    const photo_input = document.querySelector('#photo-input');
+    var uploaded_image = "";
+    photo_input.addEventListener("change", function () {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+        uploaded_image = reader.result;
+        const addPhoto = document.querySelector("#addPhoto");
+        addPhoto.style.backgroundImage = `url(${uploaded_image})`;
+        addPhoto.style.backgroundPosition = 'center'
+        addPhoto.style.backgroundSize='cover'
+    })
+    reader.readAsDataURL(this.files[0]);
+    })
     const addFname = document.getElementById('addFname');
     const inputFname = document.getElementById('fname-inp');
     inputFname.addEventListener('input',()=>{

@@ -10,13 +10,13 @@
 </head>
 <body>
                                         <!-- PERSONAL INFORMATION -->
-    <section>
-        <div id="page1" class="leftBlock1">
+    <div class="mainDiv">
+        <section id="page1" class="leftBlock">
             <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
             <h1 class="heading">პირადი ინფო</h1>
             <span class="stage">1/3</span>
             <span class="headingLine"></span>
-            <form class="personalInformation" action="">
+            <form>
                 <div class="div-firstname">
                     <label class="main-inputs" for="fname">სახელი</label><br>
                     <input class="name-inp" type="text" name="fname" id="fname-inp" placeholder="ანზორ">
@@ -30,7 +30,7 @@
                 <div class="div-photo">
                     <h4 class="photo-h">პირადი ფოტოს ატვირთვა</h4>
                     <label class="photo-label">
-                    <input type="file" class="photo-input"/>ატვირთვა
+                    <input type="file" class="photo-input"id="photo-input"/>ატვირთვა
                     </label>
                 </div>
                 <div class="div-about">
@@ -48,17 +48,15 @@
                     <h4 class="mobile warning">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</h4>
                 </div>
             </form>
-            <button class="nextPage" id="nextPage1">შემდეგი</button>
-        </div>
-    </section>
-                                            <!-- EXPERIENCE -->
-    <section>
-        <div id="page2" class="leftBlock2" >
+            <button class="nextPage" id="nextPage1" style="margin: 152px 0 0 797px;">შემდეგი</button>
+        </section>
+                                                <!-- EXPERIENCE -->
+        <section id="page2" class="leftBlock" >
             <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
             <h1 class="heading">გამოცდილება</h1>
             <span class="stage">2/3</span>
             <span class="headingLine"></span>
-            <form class="personalInformation" action="">
+            <form>
                 <div class="div-position">
                     <label class="main-labels" for="position">თანამდებობა</label><br>
                     <input class="full-width-input" type="text" name="position" id="position" placeholder="დეველოპერი, დიზაინერი, ა.შ.">
@@ -81,86 +79,91 @@
                     <label class="main-inputs" for="description">აღწერა</label>
                     <textarea class="exp-txtarea textarea" name="descr" id="experience-desc" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
                 </div>
-            </form>
-                <button class="more">მეტი გამოცდილების დამატება</button>
-                <button id="previous1" class="previous">უკან</button>
-                <button id="nextPage2"  class="nextPage">შემდეგი</button>
                 <span class="bottom-line"></span>
-        </div>
-    </section>
-                                            <!-- EDUCATION -->
-    <section>
-        <div id="page3" class="leftBlock3">
-            <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
-            <h1 class="heading">განათლება</h1>
-            <span class="stage">3/3</span>
-            <span class="headingLine"></span>
-            <form class="personalInformation">
-                <div class="div-institute">
-                    <label class="main-labels" for="institute">სასწავლებელი</label><br>
-                    <input class="full-width-input" type="text" name="institute" id="institute" placeholder="სასწავლებელი">
-                    <h4 class="warning">მინიმუმ 2 სიმბოლო</h4>
-                </div>
-                <div class="div-stage">
-                        <label class="main-labels" for="stage">ხარისხი</label><br>
-                        <select class="name-inp" name="stage" id="degree" aria-placeholder="აირჩიეთ ხარისხი">
-                        </select>
-                </div>
-                <div class="div-educFinish">
-                    <label class="main-labels" for="finish">დამთავრების რიცხვი</label><br>
-                    <input class="name-inp" type="date" name="finishInput" id="educFinish" placeholder="მუმლაძე">
-                </div>
-                <div class="div-description2">
-                    <label class="main-inputs" for="description">აღწერა</label>
-                    <textarea class="educ-txtarea textarea" name="descr" id="education-desc" placeholder="განათლების აღწერა"></textarea>
-                </div>
             </form>
-                <span class="bottom-line2"></span>
-                <button class="more more-position">მეტი გამოცდილების დამატება</button>
-                <button id="previous2" class="previous">უკან</button>
-                <button id="nextPage3"  class="nextPage">შემდეგი</button>
-        </div>
-        <div id="rightBlock" class="rightBlock">
-            <img class="logo-12" src="./assets/images/LOGO-12 1.png" alt="logo">
-            <!-- FIRST PAGE INFO -->
-            <div class="addname">
-                <h2 id="addFname" class="addFname"></h2>
-                <h2 id="addLname" class="addLname"></h2>
+            <div id="addMoreExp"></div>
+            <button id="more" class="more">მეტი გამოცდილების დამატება</button>
+            <div style="display: flex;justify-content: space-between; width: 798px;margin:115px 0 0 149px;">
+            <button id="previous1" class="previous">უკან</button>
+            <button id="nextPage2"  class="nextPage">შემდეგი</button>
             </div>
-            <img class="addMailImg" src="./assets/images/mail.png" alt="mailicon">
-            <span id="addMail" class="addMail"></span><br>
-            <img class="addPhoneImg" src="./assets/images/phone.png" alt="phoneicon"> 
-            <span id="addPhone" class="addPhone"></span>
-            <h3 id="aboutMeHeader"> ჩემ შესახებ</h3>
-            <p class="aboutMe" id="aboutMe"></p>
-            <span class="cv-line"></span>
-            <!-- SECOND PAGE INFO -->
-            <h3 class="ExperienceHeader">გამოცდილება</h3>
-            <div class="addWork">
-                <span id="addPosition"class="addPosition"></span>
-                <span id="addEmployer"class="addEmployer"></span>
+        </section>
+                                                <!-- EDUCATION -->
+            <section id="page3" class="leftBlock">
+                <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
+                <h1 class="heading">განათლება</h1>
+                <span class="stage">3/3</span>
+                <span class="headingLine"></span>
+                <form>
+                    <div class="div-institute">
+                        <label class="main-labels" for="institute">სასწავლებელი</label><br>
+                        <input class="full-width-input" type="text" name="institute" id="institute" placeholder="სასწავლებელი">
+                        <h4 class="warning">მინიმუმ 2 სიმბოლო</h4>
+                    </div>
+                    <div class="div-stage">
+                            <label class="main-labels" for="stage">ხარისხი</label><br>
+                            <select class="name-inp" name="stage" id="degree" aria-placeholder="აირჩიეთ ხარისხი">
+                            </select>
+                    </div>
+                    <div class="div-educFinish">
+                        <label class="main-labels" for="finish">დამთავრების რიცხვი</label><br>
+                        <input class="name-inp" type="date" name="finishInput" id="educFinish" placeholder="მუმლაძე">
+                    </div>
+                    <div class="div-description2">
+                        <label class="main-inputs" for="description">აღწერა</label>
+                        <textarea class="educ-txtarea textarea" name="descr" id="education-desc" placeholder="განათლების აღწერა"></textarea>
+                    </div>
+                    <span class="bottom-line"></span>
+                </form>
+                    <button class="more">მეტი გამოცდილების დამატება</button>
+                    <div style="display: flex;justify-content: space-between; width: 798px;margin:200px 0 0 149px;">
+                        <button id="previous2" class="previous">უკან</button>
+                        <button id="nextPage3"  class="nextPage">დასრულება</button>
+                    </div>
+            </section>
+                                            <!-- RIGHT BLOCK -->
+            <section id="rightBlock" class="rightBlock">
+                <img class="logo-12" src="./assets/images/LOGO-12 1.png" alt="logo">
+                <!-- FIRST PAGE INFO -->
+                <div class="addname">
+                    <h2 id="addFname" class="addFname"></h2>
+                    <h2 id="addLname" class="addLname"></h2>
+                </div>
+                <div id="addPhoto"></div>
+                <img class="addMailImg" src="./assets/images/mail.png" alt="mailicon">
+                <span id="addMail" class="addMail"></span><br>
+                <img class="addPhoneImg" src="./assets/images/phone.png" alt="phoneicon"> 
+                <span id="addPhone" class="addPhone"></span>
+                <h3 id="aboutMeHeader"> ჩემ შესახებ</h3>
+                <p class="aboutMe" id="aboutMe"></p>
+                <span class="cv-line"></span>
+                <!-- SECOND PAGE INFO -->
+                <h3 class="ExperienceHeader">გამოცდილება</h3>
+                <div class="addWork">
+                    <span id="addPosition"class="addPosition"></span>
+                    <span id="addEmployer"class="addEmployer"></span>
+                </div>
+                <div class="addDate">
+                    <span id="addStart"class="addStart"></span>
+                    <span id="addDue"class="addDue"></span>
+                </div>
+                <p class="addDescription" id="addDescription"></p>
+                <span class="cv-line"></span>
+                <!-- ThIRD PAGE INFO -->
+                <h3 class="EducationHeader">სასწავლებელი</h3>
+                <div class="addEducation">
+                    <span id="addInstitute"class="addInstitute"></span>
+                    <span id="addDegree"class="addDegree"></span>
+                </div>
+                <span class="addDate" id="addDue2"></span>
+                <p class="addDescription" id="addDescription2"></p>
+            </section>
+            <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
+            <div id="popUp">
+                <h5>რეზიუმე წარმატებით გაიგზავნა  🎉</h5>
+                <img id="X" src="./assets/images/X.png" alt="X">
             </div>
-            <div class="addDate">
-                <span id="addStart"class="addStart"></span>
-                <span id="addDue"class="addDue"></span>
-            </div>
-            <p class="addDescription" id="addDescription"></p>
-            <span class="cv-line"></span>
-            <!-- ThIRD PAGE INFO -->
-            <h3 class="EducationHeader">სასწავლებელი</h3>
-            <div class="addEducation">
-                <span id="addInstitute"class="addInstitute"></span>
-                <span id="addDegree"class="addDegree"></span>
-            </div>
-            <span class="addDate" id="addDue2"></span>
-            <p class="addDescription" id="addDescription2"></p>
-        </div>
-        <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
-        <div id="popUp">
-            <h5>რეზიუმე წარმატებით გაიგზავნა  🎉</h5>
-            <img id="X" src="./assets/images/X.png" alt="X">
-        </div>
-    </section>
+    </div>
     <script src='./js/main.js'type="module"></script>
 </body>
 </html>
