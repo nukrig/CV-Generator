@@ -12,93 +12,96 @@ export const inputExport = ()=>{
         addPhoto.style.backgroundPosition = 'center'
         addPhoto.style.backgroundSize='cover'
     })
+    formData.image= reader
     reader.readAsDataURL(this.files[0]);
     })
     const addFname = document.getElementById('addFname');
     const inputFname = document.getElementById('fname-inp');
     inputFname.addEventListener('input',()=>{
-        addFname.textContent = inputFname.value
+        // addFname.textContent = inputFname.value
+        // formData.name=inputFname.value
         formData.name=inputFname.value
+        addFname.textContent = formData.name
     })
     const addLname = document.getElementById('addLname');
     const inputLname = document.getElementById('lname-inp');
     inputLname.addEventListener('input',()=>{
-        addLname.textContent = inputLname.value
         formData.surname=inputLname.value
+        addLname.textContent = formData.surname
     })
     const addMail = document.getElementById('addMail')
     const mail = document.getElementById('eMail')
     mail.addEventListener('input',()=>{
-        addMail.textContent = mail.value
         formData.email=mail.value
+        addMail.textContent = formData.email
     })
     const addPhone = document.getElementById('addPhone')
     const phone = document.getElementById('number')
     phone.addEventListener('input',()=>{
-        addPhone.textContent = phone.value
         formData.phone_number=phone.value
+        addPhone.textContent = formData.phone_number
     })
     const aboutMe = document.getElementById('aboutMe')
     const about = document.getElementById('personal-about')
     about.addEventListener('input',()=>{
-        aboutMe.textContent = about.value
         formData.about_me=about.value
+        aboutMe.textContent = formData.about_me
     })
     // SECOND PAGE
     const addPosition = document.getElementById('addPosition')
     const position = document.getElementById('position')
     position.addEventListener('input',()=>{
-        addPosition.textContent=position.value+','
-        formData.position=position.value
+        formData.experiences[0].position=position.value
+        addPosition.textContent=formData.experiences[0].position+','
     })
     const addEmployer = document.getElementById('addEmployer')
     const employer = document.getElementById('employer')
     employer.addEventListener('input',()=>{
-        addEmployer.textContent=employer.value
-        formData.employer=employer.value
+        formData.experiences[0].employer=employer.value
+        addEmployer.textContent=formData.experiences[0].employer
     })
     const addStart = document.getElementById('addStart')
     const startDate = document.getElementById('startDate-inp')
     startDate.addEventListener('input',()=>{
-        addStart.textContent=startDate.value + ' - '
-        formData.start_date=startDate.value
+        formData.experiences[0].start_date=startDate.value
+        addStart.textContent=formData.experiences[0].start_date + ' - '
     })
     const addDue = document.getElementById('addDue')
     const dueDate = document.getElementById('dueDate-inp')
     dueDate.addEventListener('input',()=>{
-        addDue.textContent=dueDate.value
         formData.experiences[0].due_date=dueDate.value
+        addDue.textContent=formData.experiences[0].due_date
     })
     const addDescription = document.getElementById('addDescription')
     const description = document.getElementById('experience-desc')
     description.addEventListener('input',()=>{
-        addDescription.textContent=description.value
         formData.experiences[0].description=description.value
+        addDescription.textContent=formData.experiences[0].description
     })
     // THIRD PAGE
     const addInstitute = document.getElementById('addInstitute')
     const institute = document.getElementById('institute')
     institute.addEventListener('input',()=>{
-        addInstitute.textContent=institute.value+','
-        formData.institute=institute.value
+        formData.educations[0].institute=institute.value
+        addInstitute.textContent=formData.educations[0].institute+','
     })
     const addDegree = document.getElementById('addDegree')
     const degree = document.getElementById('degree')
     degree.addEventListener('input',()=>{
-        addDegree.textContent=degree.value
-        formData.degree=degree.value
+        formData.educations[0].degree=degree.value
+        addDegree.textContent=formData.educations[0].degree
     })
     const addDue2 = document.getElementById('addDue2')
     const educFinish = document.getElementById('educFinish')
     educFinish.addEventListener('input',()=>{
-        addDue2.textContent=educFinish.value
         formData.educations[0].due_date=educFinish.value
+        addDue2.textContent=formData.educations[0].due_date
+        // console.log(formData.educations[0].due_date);
     })
     const addDescription2 = document.getElementById('addDescription2')
     const educDescr = document.getElementById('education-desc')
     educDescr.addEventListener('input',()=>{
-        addDescription2.textContent=educDescr.value
         formData.educations[0].description=educDescr.value
-        console.log(formData);
+        addDescription2.textContent=formData.educations[0].description
     })
 }

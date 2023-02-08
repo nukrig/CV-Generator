@@ -1,5 +1,5 @@
 export const fetchExport = ()=>{
-    const stage = document.getElementById('degree')
+    const stage = document.getElementById(`degree`)
     fetch('https://resume.redberryinternship.ge/api/degrees')
     .then(response=>response.json())
     .then(data=>
