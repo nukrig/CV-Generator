@@ -22,13 +22,25 @@ return  `<form>
         <label class="main-inputs" for="description">აღწერა</label>
         <textarea class="exp-txtarea textarea" name="descr" id="experience-desc${templateIndex}" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
     </div>
-        <span class="bottom-line"></span>
+    // <span class="bottom-line"></span>
     </form>
     `
 }
+export function newExperienceRight(templateIndex){
+return `<div class="addWork">
+        <span id="addPosition${templateIndex}"class="addPosition"></span>
+        <span id="addEmployer${templateIndex}"class="addEmployer"></span>
+    </div>
+    <div class="addDate">
+        <span id="addStart${templateIndex}"class="addStart"></span>
+        <span id="addDue${templateIndex}"class="addDue"></span>
+    </div>
+    
+    <p id="addDescription${templateIndex}" class="addDescription"></p>`
+}
 
 export function newEducation(templateIndex){
-    return  `<form>
+return  `<form>
     <div class="div-institute" style="margin: 29px 0 0 126px;">
         <label class="main-labels" for="institute">სასწავლებელი</label><br>
         <input class="full-width-input" type="text" name="institute" id="institute${templateIndex}" placeholder="სასწავლებელი">
@@ -50,4 +62,13 @@ export function newEducation(templateIndex){
      <span class="bottom-line"></span>
         </form>
         `
+    }
+export function newEducationRight(templateIndex){
+return `<div class="addEducation">
+            <span id="addInstitute${templateIndex}"class="addInstitute"></span>
+            <span id="addDegree${templateIndex}"class="addDegree"></span>
+        </div>
+            <span id="addDue2${templateIndex}" class="addDate" ></span>
+        <p id="addDescription2${templateIndex}" class="addDescription"></p>
+`
     }

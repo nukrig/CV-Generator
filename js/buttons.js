@@ -1,6 +1,7 @@
 import { formData } from "./data.js"
-import { newExperience , newEducation } from "./createHtml.js";
-import { fetchExport } from "./fetch.js";
+import { newExperience ,newExperienceRight, newEducation ,newEducationRight } from "./createHtml.js";
+import { ifPersonalInput } from "./ifInputValue.js";
+import { validateFname,validateLname,validateEmail,validateNumber} from "./validations.js";
 
 export const pageButtonsExport = ()=>{
     const nextButton1 = document.getElementById('nextPage1')
@@ -16,11 +17,19 @@ export const pageButtonsExport = ()=>{
     const logo12 = document.querySelector('.logo-12')
     const mainDiv = document.querySelector('.mainDiv')
     const popUp = document.getElementById('popUp')
+    const photo = document.getElementById('addPhoto')
     nextButton1.addEventListener('click',()=>{
-        p1.style.display='none'
-        p2.style.display='block'
+        if(validateFname()&&validateLname()&&validateEmail()&&validateNumber()){
+            document.getElementById('moreInCvExp').style.display='block'
+            document.querySelector('.ExperienceHeader').style.display='block'
+            document.getElementById('expLine').style.display='block'
+            p1.style.display='none'
+            p2.style.display='block'
+        }
     })
     nextButton2.addEventListener('click',()=>{
+        document.getElementById('moreInCvEduc').style.display='block'
+        document.querySelector('.EducationHeader').style.display='block'
         p2.style.display='none'
         p3.style.display='block'
     })
@@ -36,6 +45,8 @@ export const pageButtonsExport = ()=>{
         p3.style.display='none'
         rightBlock.style.marginLeft='549px'
         rightBlock.style.marginTop='54px'
+        photo.style.left='1050px'
+        photo.style.top='102px'
         logo12.style.left='627px'
         mainDiv.style.height='1263px'
         rightBlock.style.border='0.8px solid #000000';
@@ -53,11 +64,21 @@ export const pageButtonsExport = ()=>{
             "due_date": "",
             "description": ""
     }
-    // const addPosition = document.getElementById('addPosition')
     const more = document.getElementById('more')
+    const expRight = document.getElementById('moreInCvExp')
     let index = 0
     more.addEventListener('click',()=>{
+        if(index==1){
+            document.getElementById('moreInCvExp').style.display='block'
+            document.querySelector('.ExperienceHeader').style.display='block'
+            document.getElementById('expLine').style.display='block'
+        }
+        nextButton2.style.marginBottom='65px'
         index++
+        const newDiv=document.createElement('div')
+        newDiv.innerHTML=newExperienceRight(index)
+        newDiv.style.display='none'
+        expRight.appendChild(newDiv)
         const addMoreExp = document.getElementById('addMoreExp')
         const ulExp= document.createElement('ul')
         const liExp = document.createElement('li')
@@ -67,29 +88,39 @@ export const pageButtonsExport = ()=>{
         formData.experiences.push({...expObj})
         for (let i=0;i<index;i++) {
             document.getElementById(`position${i+1}`).addEventListener('input',(event)=>{
+                if (document.getElementById(`position${i+1}`).value) {
+                    newDiv.style.display='block'
+                }
                 formData.experiences[i+1].position=event.target.value
-                console.log(formData);
-                // addPosition.textContent=formData.experiences[i+1].position+','
+                document.getElementById(`addPosition${i+1}`).textContent=formData.experiences[i+1].position
             })
             document.getElementById(`employer${i+1}`).addEventListener('input',(event)=>{
+                if (document.getElementById(`employer${i+1}`).value) {
+                    newDiv.style.display='block'
+                }
                 formData.experiences[i+1].employer=event.target.value
-                console.log(formData);
-                // addPosition.textContent=formData.experiences[i+1].employer+','
+                document.getElementById(`addEmployer${i+1}`).textContent=formData.experiences[i+1].employer
             })
             document.getElementById(`startDate-inp${i+1}`).addEventListener('input',(event)=>{
+                if (document.getElementById(`startDate-inp${i+1}`).value) {
+                    newDiv.style.display='block'
+                }
                 formData.experiences[i+1].start_date=event.target.value
-                console.log(formData);
-                // addPosition.textContent=formData.experiences[i+1].start_date+','
+                document.getElementById(`addStart${i+1}`).textContent=formData.experiences[i+1].start_date + ' - '
             })
             document.getElementById(`dueDate-inp${i+1}`).addEventListener('input',(event)=>{
+                if (document.getElementById(`dueDate-inp${i+1}`).value) {
+                    newDiv.style.display='block'
+                }
                 formData.experiences[i+1].due_date=event.target.value
-                console.log(formData);
-                // addPosition.textContent=formData.experiences[i+1].due_date+','
+                document.getElementById(`addDue${i+1}`).textContent=formData.experiences[i+1].due_date
             })
             document.getElementById(`experience-desc${i+1}`).addEventListener('input',(event)=>{
+                if (document.getElementById(`experience-desc${i+1}`).value) {
+                    newDiv.style.display='block'
+                }
                 formData.experiences[i+1].description=event.target.value
-                console.log(formData);
-                // addPosition.textContent=formData.experiences[i+1].description+','
+                document.getElementById(`addDescription${i+1}`).textContent=formData.experiences[i+1].description
             })
         }
     })
@@ -100,11 +131,15 @@ export const pageButtonsExport = ()=>{
         "due_date": "",
         "description": ""
 }
-// const addPosition = document.getElementById('addPosition')
 const more2 = document.getElementById('more2')
+const educRight = document.getElementById('moreInCvEduc')
 let index1 = 0
 more2.addEventListener('click',()=>{
+    nextButton3.style.marginBottom='65px'
     index1++
+    const newDiv2=document.createElement('div')
+    newDiv2.innerHTML=newEducationRight(index1)
+    educRight.appendChild(newDiv2)
     const addMoreEduc = document.getElementById('addMoreEduc')
     const ulEduc= document.createElement('ul')
     const liEduc = document.createElement('li')
@@ -112,28 +147,24 @@ more2.addEventListener('click',()=>{
     ulEduc.appendChild(liEduc)
     addMoreEduc.appendChild(ulEduc)
     formData.educations.push({...educObj})
-    console.log(formData);
     for (let i=0;i<index1;i++) {
         document.getElementById(`institute${i+1}`).addEventListener('input',(event)=>{
             formData.educations[i+1].institute=event.target.value
-            console.log(formData);
-            // addPosition.textContent=formData.educations[i+1].institute+','
+            document.getElementById(`addInstitute${i+1}`).textContent=formData.educations[i+1].institute+','
         })
         document.getElementById(`degree${i+1}`).addEventListener('input',(event)=>{
             formData.educations[i+1].degree=event.target.value
-            console.log(formData);
-            // addPosition.textContent=formData.educations[i+1].degree+','
+            document.getElementById(`addDegree${i+1}`).textContent=formData.educations[i+1].degree
         })
         document.getElementById(`educFinish${i+1}`).addEventListener('input',(event)=>{
             formData.educations[i+1].due_date=event.target.value
-            console.log(formData);
-            // addPosition.textContent=formData.educations[i+1].due_date','
+            document.getElementById(`addDue2${i+1}`).textContent=formData.educations[i+1].due_date
         })
         document.getElementById(`education-desc${i+1}`).addEventListener('input',(event)=>{
             formData.educations[i+1].description=event.target.value
-            console.log(formData);
-            // addPosition.textContent=formData.educations[i+1].description
+            document.getElementById(`addDescription2${i+1}`).textContent=formData.educations[i+1].description
         })
+        
     }
 })
 }

@@ -7,13 +7,13 @@ body{
 }
 .mainDiv{
     width: 1920px;
-    height: 1080px;
+    min-height: 1080px;
     display: flex;
 }
 /* GLOBAL STYLES */
 .leftBlock{
     width: 1158px;
-    height: 1080px;
+    min-height: 1080px;
     background-color: #F9F9F9;
 }
 .rightBlock{
@@ -373,6 +373,9 @@ body{
 }
                                         /* RIGHT BLOCK*/
 /* FIRST PAGE INFO */
+.personalDiv,#moreInCvExp,.ExperienceHeader,#moreInCvEduc,.EducationHeader{
+    display: none;
+}
 #addPhoto{
     position: absolute;
     width: 246px;
@@ -428,6 +431,7 @@ body{
     margin-top: 34px;
 }
 .aboutMe{
+    min-height: 72px;
     margin-top: 15px;
     margin-left: 80px;
     color: #000000;
@@ -440,7 +444,8 @@ body{
 }
 .cv-line{
     width: 662px;
-    border: 1px solid #C8C8C8;
+    height: 1px;
+    background-color: #C8C8C8;
     display: inline-block;
     margin-top: 19px;
     margin-left: 80px;
@@ -516,14 +521,11 @@ body{
     top: 17.44px;
     right: 11.44px;
 }
-
-
-
-
-
-
-
-/* .personalInformation{
+.absolute{
     position: absolute;
-    top: 630px;
-} */
+    margin-top: 24px;
+    margin-left: 13.5px;
+}
+.dispNone{
+    display: none;
+}

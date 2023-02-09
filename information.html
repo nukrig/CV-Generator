@@ -19,12 +19,16 @@
             <form>
                 <div class="div-firstname">
                     <label class="main-inputs" for="fname">სახელი</label><br>
-                    <input class="name-inp" type="text" name="fname" id="fname-inp" placeholder="ანზორ">
+                    <input class="name-inp relative" type="text" name="fname" id="fname-inp" placeholder="ანზორ">
+                    <img class="absolute dispNone"  src="./assets/images/red.png" alt="">
+                    <img class="absolute dispNone" src="./assets/images/green.png" alt="">
                     <h4 class="name warning">მინიმუმ 2 ასო,ქართული ასოები</h4>
                 </div>
                 <div class="div-lastname">
                     <label class="main-inputs" for="lname">გვარი</label><br>
                     <input class="name-inp" type="text" name="lname" id="lname-inp" placeholder="მუმლაძე">
+                    <img class="absolute dispNone"  src="./assets/images/red.png" alt="">
+                    <img class="absolute dispNone" src="./assets/images/green.png" alt="">
                     <h4 class="name warning">მინიმუმ 2 ასო,ქართული ასოები</h4>
                 </div>
                 <div class="div-photo">
@@ -40,11 +44,15 @@
                 <div class="div-email">
                     <label class="main-inputs" for="email">ელ.ფოსტა</label><br>
                     <input class="full-width-input" type="text" name="email" id="eMail" placeholder="anzorr666@redberry.ge">
+                    <img class="absolute dispNone"  src="./assets/images/red.png" alt="">
+                    <img class="absolute dispNone" src="./assets/images/green.png" alt="">
                     <h4 class="email warning">უნდა მთავრდებოდეს @redberry.ge-ით</h4>
                 </div>
                 <div class="div-number">
                     <label class="main-inputs" for="email">მობილურის ნომერი</label><br>
                     <input class="full-width-input" type="text" name="number" id="number" placeholder="+995 551 12 34 56">
+                    <img class="absolute dispNone"  src="./assets/images/red.png" alt="">
+                    <img class="absolute dispNone" src="./assets/images/green.png" alt="">
                     <h4 class="mobile warning">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</h4>
                 </div>
             </form>
@@ -124,41 +132,46 @@
             </section>
                                             <!-- RIGHT BLOCK -->
             <section id="rightBlock" class="rightBlock">
-                <img class="logo-12" src="./assets/images/LOGO-12 1.png" alt="logo">
                 <!-- FIRST PAGE INFO -->
-                <div class="addname">
-                    <h2 id="addFname" class="addFname"></h2>
-                    <h2 id="addLname" class="addLname"></h2>
+                <div class="personalDiv" style="width: 485px;">
+                    <div class="addname">
+                        <h2 id="addFname" class="addFname"></h2>
+                        <h2 id="addLname" class="addLname"></h2>
+                    </div>
+                    <div id="addPhoto"></div>
+                    <img class="addMailImg" src="./assets/images/mail.png" alt="mailicon">
+                    <span id="addMail" class="addMail"></span><br>
+                    <img class="addPhoneImg" src="./assets/images/phone.png" alt="phoneicon"> 
+                    <span id="addPhone" class="addPhone"></span>
+                    <h3 id="aboutMeHeader"> ჩემ შესახებ</h3>
+                    <p class="aboutMe" id="aboutMe"></p>
+                    <span class="cv-line"></span>
                 </div>
-                <div id="addPhoto"></div>
-                <img class="addMailImg" src="./assets/images/mail.png" alt="mailicon">
-                <span id="addMail" class="addMail"></span><br>
-                <img class="addPhoneImg" src="./assets/images/phone.png" alt="phoneicon"> 
-                <span id="addPhone" class="addPhone"></span>
-                <h3 id="aboutMeHeader"> ჩემ შესახებ</h3>
-                <p class="aboutMe" id="aboutMe"></p>
-                <span class="cv-line"></span>
+                <img class="logo-12" src="./assets/images/LOGO-12 1.png" alt="logo">
                 <!-- SECOND PAGE INFO -->
                 <h3 class="ExperienceHeader">გამოცდილება</h3>
-                <div class="addWork">
-                    <span id="addPosition"class="addPosition"></span>
-                    <span id="addEmployer"class="addEmployer"></span>
-                    <!-- <span id="addPosition"class="addPosition"></span> -->
+                <div id="moreInCvExp">
+                    <div class="addWork">
+                        <span id="addPosition"class="addPosition"></span>
+                        <span id="addEmployer"class="addEmployer"></span>
+                    </div>
+                    <div class="addDate">
+                        <span id="addStart"class="addStart"></span>
+                        <span id="addDue"class="addDue"></span>
+                    </div>
+                    <p id="addDescription" class="addDescription" ></p>
                 </div>
-                <div class="addDate">
-                    <span id="addStart"class="addStart"></span>
-                    <span id="addDue"class="addDue"></span>
-                </div>
-                <p class="addDescription" id="addDescription"></p>
-                <span class="cv-line"></span>
+                <span id="expLine" class="cv-line" style="display: none;"></span>
                 <!-- ThIRD PAGE INFO -->
                 <h3 class="EducationHeader">სასწავლებელი</h3>
-                <div class="addEducation">
-                    <span id="addInstitute"class="addInstitute"></span>
-                    <span id="addDegree"class="addDegree"></span>
+                <div id="moreInCvEduc">
+                    <div class="addEducation">
+                        <span id="addInstitute"class="addInstitute"></span>
+                        <span id="addDegree"class="addDegree"></span>
+                    </div>
+                    <span class="addDate" id="addDue2"></span>
+                    <p class="addDescription" id="addDescription2"></p>
                 </div>
-                <span class="addDate" id="addDue2"></span>
-                <p class="addDescription" id="addDescription2"></p>
             </section>
             <a class="home" href="./index.html"><button><img src="./assets/images/Vector.png" alt="Vector"></button></a>
             <div id="popUp">

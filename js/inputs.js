@@ -1,51 +1,62 @@
 import { formData } from "./data.js";
+import { ifPersonalInput } from "./ifInputValue.js";
+import { validateFname,validateLname ,validateEmail,validateNumber } from "./validations.js";
 export const inputExport = ()=>{
     // FIST PAGE
     const photo_input = document.querySelector('#photo-input');
     var uploaded_image = "";
     photo_input.addEventListener("change", function () {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-        uploaded_image = reader.result;
-        const addPhoto = document.querySelector("#addPhoto");
-        addPhoto.style.backgroundImage = `url(${uploaded_image})`;
-        addPhoto.style.backgroundPosition = 'center'
-        addPhoto.style.backgroundSize='cover'
-    })
-    formData.image= reader
-    reader.readAsDataURL(this.files[0]);
+        document.querySelector('.personalDiv').style.display='block'
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+            uploaded_image = reader.result;
+            const addPhoto = document.querySelector("#addPhoto");
+            addPhoto.style.backgroundImage = `url(${uploaded_image})`;
+            addPhoto.style.backgroundPosition = 'center'
+            addPhoto.style.backgroundSize='cover'
+        })
+        formData.image= reader
+        reader.readAsDataURL(this.files[0]);
     })
     const addFname = document.getElementById('addFname');
     const inputFname = document.getElementById('fname-inp');
     inputFname.addEventListener('input',()=>{
-        // addFname.textContent = inputFname.value
-        // formData.name=inputFname.value
-        formData.name=inputFname.value
+        formData.name=inputFname.value.split(' ').join('')
         addFname.textContent = formData.name
+        ifPersonalInput(inputFname);
+        validateFname()
     })
     const addLname = document.getElementById('addLname');
     const inputLname = document.getElementById('lname-inp');
     inputLname.addEventListener('input',()=>{
-        formData.surname=inputLname.value
+        formData.surname=inputLname.value.split(' ').join('')
         addLname.textContent = formData.surname
+        ifPersonalInput(inputLname);
+        ifPersonalInput(inputFname);
+        validateLname()
     })
     const addMail = document.getElementById('addMail')
     const mail = document.getElementById('eMail')
     mail.addEventListener('input',()=>{
-        formData.email=mail.value
+        formData.email=mail.value.split(' ').join('')
         addMail.textContent = formData.email
+        ifPersonalInput(mail);
+        validateEmail()
     })
     const addPhone = document.getElementById('addPhone')
     const phone = document.getElementById('number')
     phone.addEventListener('input',()=>{
-        formData.phone_number=phone.value
+        formData.phone_number=phone.value.split(' ').join('')
         addPhone.textContent = formData.phone_number
+        ifPersonalInput(phone);
+        validateNumber()
     })
     const aboutMe = document.getElementById('aboutMe')
     const about = document.getElementById('personal-about')
     about.addEventListener('input',()=>{
         formData.about_me=about.value
         aboutMe.textContent = formData.about_me
+        ifPersonalInput(about);
     })
     // SECOND PAGE
     const addPosition = document.getElementById('addPosition')
@@ -96,7 +107,6 @@ export const inputExport = ()=>{
     educFinish.addEventListener('input',()=>{
         formData.educations[0].due_date=educFinish.value
         addDue2.textContent=formData.educations[0].due_date
-        // console.log(formData.educations[0].due_date);
     })
     const addDescription2 = document.getElementById('addDescription2')
     const educDescr = document.getElementById('education-desc')
