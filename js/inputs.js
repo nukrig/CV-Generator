@@ -1,6 +1,6 @@
 import { formData } from "./data.js";
 import { ifPersonalInput } from "./ifInputValue.js";
-import { validateFname,validateLname ,validateEmail,validateNumber } from "./validations.js";
+import { validateFname,validateLname ,validateEmail,validateNumber,validateTwoSimbols,validateBlank } from "./validations.js";
 export const inputExport = ()=>{
     // FIST PAGE
     const photo_input = document.querySelector('#photo-input');
@@ -64,30 +64,35 @@ export const inputExport = ()=>{
     position.addEventListener('input',()=>{
         formData.experiences[0].position=position.value
         addPosition.textContent=formData.experiences[0].position+','
+        validateTwoSimbols(position,8,9)
     })
     const addEmployer = document.getElementById('addEmployer')
     const employer = document.getElementById('employer')
     employer.addEventListener('input',()=>{
         formData.experiences[0].employer=employer.value
         addEmployer.textContent=formData.experiences[0].employer
+        validateTwoSimbols(employer,10,11)
     })
     const addStart = document.getElementById('addStart')
     const startDate = document.getElementById('startDate-inp')
     startDate.addEventListener('input',()=>{
         formData.experiences[0].start_date=startDate.value
         addStart.textContent=formData.experiences[0].start_date + ' - '
+        validateBlank(startDate,12,13)
     })
     const addDue = document.getElementById('addDue')
     const dueDate = document.getElementById('dueDate-inp')
     dueDate.addEventListener('input',()=>{
         formData.experiences[0].due_date=dueDate.value
         addDue.textContent=formData.experiences[0].due_date
+        validateBlank(dueDate,14,15)
     })
     const addDescription = document.getElementById('addDescription')
     const description = document.getElementById('experience-desc')
     description.addEventListener('input',()=>{
         formData.experiences[0].description=description.value
         addDescription.textContent=formData.experiences[0].description
+        validateBlank(description,16,17)
     })
     // THIRD PAGE
     const addInstitute = document.getElementById('addInstitute')
@@ -95,23 +100,27 @@ export const inputExport = ()=>{
     institute.addEventListener('input',()=>{
         formData.educations[0].institute=institute.value
         addInstitute.textContent=formData.educations[0].institute+','
+        validateTwoSimbols(institute,18,19)
     })
     const addDegree = document.getElementById('addDegree')
     const degree = document.getElementById('degree')
     degree.addEventListener('input',()=>{
         formData.educations[0].degree=degree.value
         addDegree.textContent=formData.educations[0].degree
+        validateBlank(degree,20,21)
     })
     const addDue2 = document.getElementById('addDue2')
     const educFinish = document.getElementById('educFinish')
     educFinish.addEventListener('input',()=>{
         formData.educations[0].due_date=educFinish.value
         addDue2.textContent=formData.educations[0].due_date
+        validateBlank(educFinish,20,21)
     })
     const addDescription2 = document.getElementById('addDescription2')
     const educDescr = document.getElementById('education-desc')
     educDescr.addEventListener('input',()=>{
         formData.educations[0].description=educDescr.value
         addDescription2.textContent=formData.educations[0].description
+        validateBlank(educDescr,22,23)
     })
 }

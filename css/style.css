@@ -18,7 +18,7 @@ body{
 }
 .rightBlock{
     width: 822px;
-    height: 1080px;
+    min-height: 1080px;
 }
 .rightBlock h3{
     color: #F93B1D;
@@ -259,11 +259,12 @@ body{
     letter-spacing: 0.08em;
 }
 .logo-12{
-    position: absolute;
     width: 42px;
     height: 42px;
-    top: 994px;
-    left: 1176px;
+    margin-bottom: 44px;
+    margin-left: 78px;
+    margin-top: 50px;
+    display: none;
 }
                                         /* EXPERIENCE*/
 /* LEFT BLOCK2 */

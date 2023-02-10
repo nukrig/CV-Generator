@@ -24,4 +24,35 @@ export let formData=
     "image": "",
     "about_me": ""
   }
-  // console.log(formData.educations[0].due_date);
+
+
+  export function removeEmptyValues(obj) {
+    for (const prop in obj) {
+      if (obj[prop] === null || obj[prop] === undefined || obj[prop] === '') {
+        delete obj[prop];
+      } else if (typeof obj[prop] === 'object') {
+        removeEmptyValues(obj[prop]);
+        if (Object.keys(obj[prop]).length === 0) {
+          delete obj[prop];
+        }
+        
+      }
+    }
+    return obj;
+  }
+  //  ბოლოს გაგზავნისას შემიძლია ეს გამოვიყენო და თუ
+  //            ცარიელი იქნება რამე ამ ობიექტში წაშლის 
+
+
+
+  
+  // export function setFormData(newValue){
+  //   formData=newValue
+  // }
+
+  // export let index = 0
+  // export function setIndex(newIndex){
+  //   index=newIndex
+  // }
+
+
