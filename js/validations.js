@@ -7,7 +7,6 @@ function isGeorgian(char) {
 const redOrGreenIcon = document.querySelectorAll('.absolute')
 const inputFname = document.getElementById('fname-inp');
 export const validateFname = ()=>{
-    console.log(formData);
     for (var i = 0; i < formData.name.length; i++) {
         redOrGreenIcon[0].classList.add('dispNone')
         redOrGreenIcon[1].classList.add('dispNone')

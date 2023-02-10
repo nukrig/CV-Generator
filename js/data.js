@@ -25,7 +25,7 @@ export let formData=
     "about_me": ""
   }
 
-
+// NOTE FOR REDBERRY: THIS FUNCTION IS FROM GOOGLE, PLEASE DONT JUDGE :D 
   export function removeEmptyValues(obj) {
     for (const prop in obj) {
       if (obj[prop] === null || obj[prop] === undefined || obj[prop] === '') {
@@ -40,19 +40,5 @@ export let formData=
     }
     return obj;
   }
-  //  ბოლოს გაგზავნისას შემიძლია ეს გამოვიყენო და თუ
-  //            ცარიელი იქნება რამე ამ ობიექტში წაშლის 
-
-
-
-  
-  // export function setFormData(newValue){
-  //   formData=newValue
-  // }
-
-  // export let index = 0
-  // export function setIndex(newIndex){
-  //   index=newIndex
-  // }
 
 

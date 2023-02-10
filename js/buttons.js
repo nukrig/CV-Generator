@@ -3,34 +3,62 @@ import { newExperience ,newExperienceRight, newEducation ,newEducationRight } fr
 import { validateFname,validateLname,validateEmail,validateNumber,
          validateTwoSimbols,validateBlank,
          dynamicValidateTwoSymbols,dynamicValidateBlank} from "./validations.js";
-
+import { fetchGet,fetchPost } from "./fetch.js";
+         
+         // INPUTS
+         const redOrGreenIcon = document.querySelectorAll('.absolute')
+         const inputFname = document.getElementById('fname-inp');
+         const inputLname = document.getElementById('lname-inp');
+         const mail = document.getElementById('eMail')
+         const phone = document.getElementById('number')
+         const photo_input = document.querySelector('#photo-input')
+         const position = document.getElementById('position')
+         const employer = document.getElementById('employer')
+         const startDate = document.getElementById('startDate-inp')
+         const dueDate = document.getElementById('dueDate-inp')
+         const description = document.getElementById('experience-desc')
+         const institute = document.getElementById('institute')
+         const degree = document.getElementById('degree')
+         const educFinish = document.getElementById('educFinish')
+         const educDescr = document.getElementById('education-desc')
+        //  -------------------------------------------------------------------------------------
+         const nextButton1 = document.getElementById('nextPage1')
+         const nextButton2 = document.getElementById('nextPage2')
+         const nextButton3 = document.getElementById('nextPage3')
+         const prevButton1 = document.getElementById('previous1')
+         const prevButton2 = document.getElementById('previous2')
+         const xButton = document.getElementById('X')
+         const p1 = document.getElementById('page1')
+         const p2 = document.getElementById('page2')
+         const p3 = document.getElementById('page3')
+         const rightBlock = document.getElementById('rightBlock')
+         const logo12 = document.querySelector('.logo-12')
+         const mainDiv = document.querySelector('.mainDiv')
+         const popUp = document.getElementById('popUp')
+         const photo = document.getElementById('addPhoto')
 export const pageButtonsExport = ()=>{
-    const nextButton1 = document.getElementById('nextPage1')
-    const nextButton2 = document.getElementById('nextPage2')
-    const nextButton3 = document.getElementById('nextPage3')
-    const prevButton1 = document.getElementById('previous1')
-    const prevButton2 = document.getElementById('previous2')
-    const xButton = document.getElementById('X')
-    const p1 = document.getElementById('page1')
-    const p2 = document.getElementById('page2')
-    const p3 = document.getElementById('page3')
-    const rightBlock = document.getElementById('rightBlock')
-    const logo12 = document.querySelector('.logo-12')
-    const mainDiv = document.querySelector('.mainDiv')
-    const popUp = document.getElementById('popUp')
-    const photo = document.getElementById('addPhoto')
-    // INPUTS
-    const position = document.getElementById('position')
-    const employer = document.getElementById('employer')
-    const startDate = document.getElementById('startDate-inp')
-    const dueDate = document.getElementById('dueDate-inp')
-    const description = document.getElementById('experience-desc')
-    const institute = document.getElementById('institute')
-    const degree = document.getElementById('degree')
-    const educFinish = document.getElementById('educFinish')
-    const educDescr = document.getElementById('education-desc')
     nextButton1.addEventListener('click',()=>{
-        if(validateFname()&&validateLname()&&validateEmail()&&validateNumber()){
+        if (!inputFname.value) {
+            inputFname.style.border='1px solid #EF5050'
+            redOrGreenIcon[0].classList.remove('dispNone')
+        }
+        if (!inputLname.value) {
+            inputLname.style.border='1px solid #EF5050'
+            redOrGreenIcon[2].classList.remove('dispNone')
+        }
+        const photoValidation = document.querySelectorAll('.picValid')
+        if (!photo_input.value) {
+            photoValidation[0].classList.remove('dispNone')
+        }
+        if (!mail.value) {
+            mail.style.border='1px solid #EF5050'
+            redOrGreenIcon[4].classList.remove('dispNone')
+        }
+        if (!phone.value) {
+            phone.style.border='1px solid #EF5050'
+            redOrGreenIcon[6].classList.remove('dispNone')
+        }
+        if(validateFname()&&validateLname()&&validateEmail()&&validateNumber()&&photo_input.value){
             document.getElementById('moreInCvExp').style.display='block'
             document.querySelector('.ExperienceHeader').style.display='block'
             document.getElementById('expLine').style.display='block'
@@ -64,16 +92,15 @@ export const pageButtonsExport = ()=>{
             rightBlock.style.marginBottom='129px'
             photo.style.left='1050px'
             photo.style.top='102px'
-            logo12.style.left='627px'
             rightBlock.style.border='0.8px solid #000000';
             popUp.style.display='inline-block'
-            // removeEmptyValues(formData)
+            removeEmptyValues(formData)
+            fetchPost()
         }
     })
     xButton.addEventListener('click',()=>{
         popUp.style.display='none'
     })
-
     // ADD MORE EXPERIENCE BUTTON...
     let expObj={
             "position": "",
@@ -84,6 +111,7 @@ export const pageButtonsExport = ()=>{
     }
     const more = document.getElementById('more')
     const expRight = document.getElementById('moreInCvExp')
+    const addMoreExp = document.getElementById('addMoreExp')
     let index = 0
     more.addEventListener('click',()=>{
         if(validateTwoSimbols(position,8,9)&&validateTwoSimbols(employer,10,11)&&
@@ -97,7 +125,6 @@ export const pageButtonsExport = ()=>{
             newDiv.innerHTML=newExperienceRight(index)
             newDiv.style.display='none'
             expRight.appendChild(newDiv)
-            const addMoreExp = document.getElementById('addMoreExp')
             const ulExp= document.createElement('ul')
             const liExp = document.createElement('li')
             liExp.innerHTML = newExperience(index)
@@ -154,8 +181,6 @@ export const pageButtonsExport = ()=>{
         }
         
     })
-    
-
     // ADD MORE EDUCATION BUTTON...
     let educObj={
         "institute": "",
@@ -165,6 +190,7 @@ export const pageButtonsExport = ()=>{
 }
 const more2 = document.getElementById('more2')
 const educRight = document.getElementById('moreInCvEduc')
+const addMoreEduc = document.getElementById('addMoreEduc')
 let index1 = 0
 more2.addEventListener('click',()=>{
     if(validateTwoSimbols(institute,18,19)&&validateBlank(degree,20,21)&&
@@ -174,7 +200,6 @@ more2.addEventListener('click',()=>{
         const newDiv2=document.createElement('div')
         newDiv2.innerHTML=newEducationRight(index1)
         educRight.appendChild(newDiv2)
-        const addMoreEduc = document.getElementById('addMoreEduc')
         const ulEduc= document.createElement('ul')
         const liEduc = document.createElement('li')
         liEduc.innerHTML = newEducation(index1)
@@ -188,6 +213,7 @@ more2.addEventListener('click',()=>{
                 formData.educations[i+1].institute=event.target.value
                 document.getElementById(`addInstitute${i+1}`).textContent=formData.educations[i+1].institute+','
             })
+            fetchGet(i+1)
             document.getElementById(`degree${i+1}`).addEventListener('input',(event)=>{
                 formData.educations[i+1].degree=event.target.value
                 document.getElementById(`addDegree${i+1}`).textContent=formData.educations[i+1].degree

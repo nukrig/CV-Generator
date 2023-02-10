@@ -48,7 +48,6 @@ return `<div class="addWork">
     
     <p id="addDescription${templateIndex}" class="addDescription"></p>`
 }
-
 export function newEducation(templateIndex){
 return  `<form>
     <div class="div-institute" style="margin: 29px 0 0 126px;">
@@ -60,7 +59,7 @@ return  `<form>
      </div>
      <div class="div-stage">
             <label class="main-labels" for="stage">ხარისხი</label><br>
-            <select class="name-inp" name="stage" id="degree${templateIndex}" aria-placeholder="აირჩიეთ ხარისხი">
+            <select class="name-inp dropDown" name="stage" id="degree${templateIndex}" aria-placeholder="აირჩიეთ ხარისხი">
             <img id='red' class="absolute dispNone"  src="./assets/images/red.png" alt="">
             <img id='green' class="absolute dispNone" src="./assets/images/green.png" alt="">
             </select>

@@ -530,3 +530,7 @@ body{
 .dispNone{
     display: none;
 }
+.picValid{
+    position: absolute;
+    margin-left: 35px;
+}

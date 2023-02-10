@@ -1,5 +1,6 @@
 import { formData } from "./data.js";
 import { ifPersonalInput } from "./ifInputValue.js";
+import { fetchGet } from "./fetch.js";
 import { validateFname,validateLname ,validateEmail,validateNumber,validateTwoSimbols,validateBlank } from "./validations.js";
 export const inputExport = ()=>{
     // FIST PAGE
@@ -17,6 +18,12 @@ export const inputExport = ()=>{
         })
         formData.image= reader
         reader.readAsDataURL(this.files[0]);
+        const photoValidation = document.querySelectorAll('.picValid')
+        if (photo_input.value) {
+            photo_input.style.border='1px solid #98E37E'
+            photoValidation[0].classList.add('dispNone')
+            photoValidation[1].classList.remove('dispNone')
+        }
     })
     const addFname = document.getElementById('addFname');
     const inputFname = document.getElementById('fname-inp');
@@ -104,10 +111,11 @@ export const inputExport = ()=>{
     })
     const addDegree = document.getElementById('addDegree')
     const degree = document.getElementById('degree')
+    fetchGet(0)
     degree.addEventListener('input',()=>{
         formData.educations[0].degree=degree.value
         addDegree.textContent=formData.educations[0].degree
-        validateBlank(degree,20,21)
+        validateBlank(degree,0,1)
     })
     const addDue2 = document.getElementById('addDue2')
     const educFinish = document.getElementById('educFinish')
