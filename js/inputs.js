@@ -27,7 +27,7 @@ export const inputExport = ()=>{
     })
     const addFname = document.getElementById('addFname');
     const inputFname = document.getElementById('fname-inp');
-    inputFname.addEventListener('input',()=>{
+    inputFname.addEventListener('input',()=>{ 
         formData.name=inputFname.value.split(' ').join('')
         addFname.textContent = formData.name
         ifPersonalInput(inputFname);

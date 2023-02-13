@@ -245,6 +245,10 @@ body{
     line-height:20px;
     letter-spacing:0.08em;
     color: #FFFFFF;
+    transition: all .5s;
+}
+.nextPage:hover{
+    background-color: #512FAF;
 }
 .previous{
     width: 113px;
@@ -257,6 +261,10 @@ body{
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.08em;
+    transition: all .5s;
+}
+.previous:hover{
+    background-color: #512FAF;
 }
 .logo-12{
     width: 42px;
@@ -395,7 +403,7 @@ body{
     line-height: 41.51px;
     display: flex;
     gap: 20px;
-    max-width: 600px;
+    max-width: 750px;
     overflow: hidden;
 }
 .addMailImg{
@@ -427,9 +435,6 @@ body{
     display: inline-block;
     max-width: 500px;
     overflow: hidden;
-}
-.aboutMeHeader{
-    margin-top: 34px;
 }
 .aboutMe{
     min-height: 72px;

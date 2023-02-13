@@ -32,8 +32,6 @@ import { fetchGet,fetchPost } from "./fetch.js";
          const p2 = document.getElementById('page2')
          const p3 = document.getElementById('page3')
          const rightBlock = document.getElementById('rightBlock')
-         const logo12 = document.querySelector('.logo-12')
-         const mainDiv = document.querySelector('.mainDiv')
          const popUp = document.getElementById('popUp')
          const photo = document.getElementById('addPhoto')
 export const pageButtonsExport = ()=>{
@@ -41,10 +39,12 @@ export const pageButtonsExport = ()=>{
         if (!inputFname.value) {
             inputFname.style.border='1px solid #EF5050'
             redOrGreenIcon[0].classList.remove('dispNone')
+            inputFname.parentElement.children[0].style.color='#E52F2F'
         }
         if (!inputLname.value) {
             inputLname.style.border='1px solid #EF5050'
             redOrGreenIcon[2].classList.remove('dispNone')
+            inputLname.parentElement.children[0].style.color='#E52F2F'
         }
         const photoValidation = document.querySelectorAll('.picValid')
         if (!photo_input.value) {
@@ -53,10 +53,12 @@ export const pageButtonsExport = ()=>{
         if (!mail.value) {
             mail.style.border='1px solid #EF5050'
             redOrGreenIcon[4].classList.remove('dispNone')
+            mail.parentElement.children[0].style.color='#E52F2F'
         }
         if (!phone.value) {
             phone.style.border='1px solid #EF5050'
             redOrGreenIcon[6].classList.remove('dispNone')
+            phone.parentElement.children[0].style.color='#E52F2F'
         }
         if(validateFname()&&validateLname()&&validateEmail()&&validateNumber()&&photo_input.value){
             document.getElementById('moreInCvExp').style.display='block'
@@ -67,6 +69,32 @@ export const pageButtonsExport = ()=>{
         }
     })
     nextButton2.addEventListener('click',()=>{
+        
+        if (!position.value) {
+            position.style.border='1px solid #98E37E'
+            redOrGreenIcon[8].classList.add('dispNone')
+            position.parentElement.children[0].style.color='#E52F2F'
+        }
+        if (!employer.value) {
+            employer.style.border='1px solid #EF5050'
+            redOrGreenIcon[10].classList.remove('dispNone')
+            employer.parentElement.children[0].style.color='#E52F2F'
+        }
+        if (!startDate.value) {
+            startDate.style.border='1px solid #EF5050'
+            redOrGreenIcon[12].classList.remove('dispNone')
+            startDate.parentElement.children[0].style.color='#E52F2F'
+        }
+        if (!dueDate.value) {
+            dueDate.style.border='1px solid #EF5050'
+            redOrGreenIcon[14].classList.remove('dispNone')
+            dueDate.parentElement.children[0].style.color='#E52F2F'
+        }
+        if (!description.value) {
+            description.style.border='1px solid #EF5050'
+            redOrGreenIcon[16].classList.remove('dispNone')
+            description.parentElement.children[0].style.color='#E52F2F'
+        }
         if(validateTwoSimbols(position,8,9)&&validateTwoSimbols(employer,10,11)&&
         validateBlank(startDate,12,13)&&validateBlank(dueDate,14,15)&&validateBlank(description,16,17)){
             document.getElementById('moreInCvEduc').style.display='block'
@@ -80,10 +108,26 @@ export const pageButtonsExport = ()=>{
         p1.style.display='block'
     })
     prevButton2.addEventListener('click',()=>{
+        prevButton1.style.color='#FFFFFF'
         p3.style.display='none'
         p2.style.display='block'
     })
     nextButton3.addEventListener('click',()=>{
+        if (!institute.value) {
+            institute.style.border='1px solid #98E37E'
+            redOrGreenIcon[18].classList.add('dispNone')
+            institute.parentElement.children[0].style.color='#E52F2F'
+        }
+        if (!educFinish.value) {
+            educFinish.style.border='1px solid #EF5050'
+            redOrGreenIcon[20].classList.remove('dispNone')
+            educFinish.parentElement.children[0].style.color='#E52F2F'
+        }
+        if (!educDescr.value) {
+            educDescr.style.border='1px solid #EF5050'
+            redOrGreenIcon[22].classList.remove('dispNone')
+            educDescr.parentElement.children[0].style.color='#E52F2F'
+        }
         if(validateTwoSimbols(institute,18,19)&&validateBlank(degree,20,21)&&
         validateBlank(educFinish,20,21)&&validateBlank(educDescr,22,23)){
             p3.style.display='none'
